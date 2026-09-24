@@ -213,6 +213,35 @@ export const botConfig = {
   // TICKET SYSTEM
   // =========================
   tickets: {
+    // Ticket panel appearance/content.
+    // Note: Discord native buttons do not support custom black/white button colors.
+    // style 2 = Discord Secondary, which is the closest native neutral button style.
+    panel: {
+      title: "Prevale External",
+      color: "#FFFFFF", // white embed sidebar
+      description:
+        "Prevail External Prices\n\n" +
+        "1 Month — $20\n" +
+        "3 Months — $40\n" +
+        "Lifetime — $60\n\n" +
+        "Purchase Methods — Cashapp, Crypto, PayPal\n" +
+        "For other methods specify in tickets.",
+      buttons: [
+        {
+          customId: "ticket_purchase_with_support",
+          label: "Purchase With Support",
+          style: 2,
+          requestedColor: "#000000",
+        },
+        {
+          customId: "ticket_support",
+          label: "Support",
+          style: 2,
+          requestedColor: "#FFFFFF",
+        },
+      ],
+    },
+
     // Category ID where new tickets are created (null = no forced category).
     defaultCategory: null,
 
